@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="FilimonovaEA">
+
+    <title>Словообразование</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+        <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" />
+
+      
+    <style>
+        body {
+          font-family: Georgia, "Times New Roman", Times, serif;
+          color: #555;
+        }
+
+        h1, .h1,
+        h2, .h2,
+        h3, .h3,
+        h4, .h4,
+        h5, .h5,
+        h6, .h6 {
+          margin-top: 0;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-weight: normal;
+          color: #333;
+        }
+
+        @media (min-width: 1200px) {
+          .container {
+            width: 970px;
+          }
+        }
+
+        .blog-masthead {
+          background-color: #428bca;
+          -webkit-box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+                  box-shadow: inset 0 -2px 5px rgba(0,0,0,.1);
+        }
+
+        /* Nav links */
+        .blog-nav-item {
+          position: relative;
+          display: inline-block;
+          padding: 10px;
+          font-weight: 500;
+          color: #cdddeb;
+        }
+        .blog-nav-item:hover,
+        .blog-nav-item:focus {
+          color: #fff;
+          text-decoration: none;
+        }
+
+        /* Active state gets a caret at the bottom */
+        .blog-nav .active {
+          color: #fff;
+        }
+        .blog-nav .active:after {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0;
+          height: 0;
+          margin-left: -5px;
+          vertical-align: middle;
+          content: " ";
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid;
+          border-left: 5px solid transparent;
+        }
+
+        .blog-header {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+        .blog-title {
+          margin-top: 30px;
+          margin-bottom: 0;
+          font-size: 60px;
+          font-weight: normal;
+        }
+        .blog-description {
+          font-size: 20px;
+          color: #999;
+        }
+
+        .blog-main {
+          font-size: 18px;
+          line-height: 1.5;
+        }
+
+        .sidebar-module {
+          padding: 15px;
+          margin: 0 -15px 15px;
+        }
+        .sidebar-module-inset {
+          padding: 15px;
+          background-color: #f5f5f5;
+          border-radius: 4px;
+        }
+        .sidebar-module-inset p:last-child,
+        .sidebar-module-inset ul:last-child,
+        .sidebar-module-inset ol:last-child {
+          margin-bottom: 0;
+        }
+
+        .pager {
+          margin-bottom: 60px;
+          text-align: left;
+        }
+        .pager > li > a {
+          width: 140px;
+          padding: 10px 20px;
+          text-align: center;
+          border-radius: 30px;
+        }
+
+        .blog-post {
+          margin-bottom: 60px;
+        }
+        .blog-post-title {
+          margin-bottom: 5px;
+          font-size: 40px;
+        }
+        .blog-post-meta {
+          margin-bottom: 20px;
+          color: #999;
+        }
+
+        .blog-footer {
+          bottom: 0;
+          width: 100%;
+          height: 100px;
+          color: #999;
+          text-align: center;
+          background-color: #f9f9f9;
+          border-top: 1px solid #e5e5e5;  
+          position: absolute;
+        }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="/">Модель</a>
+          <a class="blog-nav-item" href="/info">Описание</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+        <h1 class="blog-title">Словообразование</h1>
+        <p class="lead blog-description">Система позволяет определить способ образования слов</p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-8 blog-main">
+
+            <div class="blog-post">
+                <form method="POST">
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01">Первое слово</label>
+                      <input type="text" class="form-control" id="validationDefault01" placeholder="Слово 1" name="word1"  required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault02">Второе слово</label>
+                      <input type="text" class="form-control" id="validationDefault02" placeholder="Слово 2" name="word2" required>
+                    </div>
+                    <div class="col-md-4 mb-2"> 
+                        <label for="submit">Отправить</label>
+                        <button class="btn btn-primary" type="submit" id="submit">Отправить</button>
+                      </div>
+                  </div>
+                </form> 
+            </div>
+         
+            <div class="row">
+                <div class="col-md-6">
+                    <h5> Слово 1: <b> {{ word1 }} </b> </h5> 
+                    <h6>
+                        <table class="table">
+                            {% for pair in word1_lexemes %}
+                                     <tr> <td>{{ pair[0] }}</td> <td>{{ pair[1] }}</td> </tr> 
+                            {% endfor %}
+                        </table>
+                    </h6>
+                </div>
+                <div class="col-md-6">    
+                    <h5> Слово 2: <b> {{ word2 }} </b> </h5>  
+                    <h6>
+                        <table  class="table">
+                            {% for pair in word2_lexemes %}
+                                     <tr> <td>{{ pair[0] }}</td> <td>{{ pair[1] }}</td> </tr> 
+                            {% endfor %}
+                        </table>
+                    </h6>
+                </div>
+                <h5> Способ образования: <b> {{ ans }} </b> </h5>
+            </div>
+          
+        </div>
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>О системе</h4>
+            <p>Система автоматически определяет как одно слово образовалось от другого. Подробнее смотри в <a href="/info">описании</a></p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Версии системы</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">v0.0.1 11.04.19</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Смотри также</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Vk</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer font-small blue">
+      <div class="footer-copyright text-center py-3">© 2019 Copyright:
+        <a href=""> Филимонова Екатерина</a>
+      </div>
+    </footer>
+  </body>
+</html>
